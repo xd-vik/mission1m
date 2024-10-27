@@ -2,5 +2,5 @@
 
 Sachin Singh
 
-Manish Nagar.
+Manish Nagar
 
