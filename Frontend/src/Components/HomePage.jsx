@@ -1,11 +1,34 @@
-import React from "react";
+
+import React from 'react';
+
+import Carousel from './Carousel';
+import UserCard from './UserCard';
 import Navbar from "./Navbar";
-const HomePage = () => {
+import Missioncard from './Misisoncard';
+
+function HomePage() {
   return (
-    <div>
+    <>
+    <div className='min-h-screen'>
       <Navbar />
+      <Missioncard/>
+      <Carousel/>
+      <UserCard/>
     </div>
+    </>
+  
   );
-};
+}
+
+
+
+
+
+
+      
+ 
+
+
+
 
 export default HomePage;
