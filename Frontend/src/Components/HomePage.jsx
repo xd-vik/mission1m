@@ -1,9 +1,38 @@
-import React from 'react'
 
-const HomePage = () => {
+import React from 'react';
+
+import Carousel from './Carousel';
+import UserCard from './UserCard';
+import Navbar from "./Navbar";
+import Banner from './Banner';
+import Missioncard from './Misisoncard';
+
+function HomePage() {
   return (
-    <div>HomePage</div>
-  )
+    <>
+    <div className='min-h-screen'>
+      <div className='bg-green-100 pt-10'>
+      <Navbar />
+      <Banner/>
+      </div>
+      <Missioncard/>
+      <Carousel/>
+      <UserCard/>
+    </div>
+    </>
+  
+  );
 }
 
-export default HomePage
+
+
+
+
+
+      
+ 
+
+
+
+
+export default HomePage;

@@ -4,6 +4,10 @@ Project mission-one-million
 
 writing it tonight
 
+vivek
+
+Ravindra
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/xd-vik/mission1m.svg?style=for-the-badge
