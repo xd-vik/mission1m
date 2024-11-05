@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className="rounded-xl p-4 md:border-[2px] md:border-[#110303] mx-1 md:mx-20 bg-green-100 mt-10 mb-10">
       <div className="max-w-7xl mx-auto px-5 flex flex-col md:flex-row justify-between items-center">
         {/* Left Section: Logo */}
-        <div className="flex items-center justify-between w-full">
+        <div className="flex  justify-between ml-[-200px] w-full">
           <div>
             <img src={logo} alt="Logo" />
           </div>
