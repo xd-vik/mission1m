@@ -1,13 +1,18 @@
-import React from 'react';
+import React from "react";
 
 const Login = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-green-100">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-center text-green-600">Login to Your Account</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center text-green-600">
+          Login to Your Account
+        </h2>
         <form className="space-y-4">
           <div>
-            <label className="block mb-2 text-sm text-green-700" htmlFor="email">
+            <label
+              className="block mb-2 text-sm text-green-700"
+              htmlFor="email"
+            >
               Email Address
             </label>
             <input
@@ -20,7 +25,10 @@ const Login = () => {
           </div>
 
           <div>
-            <label className="block mb-2 text-sm text-green-700" htmlFor="password">
+            <label
+              className="block mb-2 text-sm text-green-700"
+              htmlFor="password"
+            >
               Password
             </label>
             <input
@@ -44,7 +52,7 @@ const Login = () => {
 
         <p className="text-sm text-center mt-6 text-green-700">
           Don't have an account?{" "}
-          <a href="#" className="text-green-500 hover:underline">
+          <a href="/Signup" className="text-green-500 hover:underline">
             Sign up
           </a>
         </p>
@@ -54,5 +62,3 @@ const Login = () => {
 };
 
 export default Login;
-
-

@@ -27,7 +27,11 @@ const Navbar = () => {
         </div>
 
         {/* Main Menu Items */}
-        <div className={`flex-col md:flex md:flex-row ${isOpen ? "flex" : "hidden"} md:flex md:space-x-10 text-2xl mr-[400px]`}>
+        <div
+          className={`flex-col md:flex md:flex-row ${
+            isOpen ? "flex" : "hidden"
+          } md:flex md:space-x-10 text-2xl mr-[400px]`}
+        >
           <a
             href="#"
             className="text-black px-3 py-2 rounded-md font-medium hover:bg-green-200 text-xl "
@@ -38,7 +42,7 @@ const Navbar = () => {
             href="#"
             className="px-5 py-2 rounded-md font-medium hover:bg-green-200 text-xl w-[150px] "
           >
-          All Courses
+            All Courses
           </a>
           <a
             href="#"
@@ -57,13 +61,13 @@ const Navbar = () => {
         {/* Right Section: Sign In and Sign Up */}
         <div className="hidden md:flex space-x-7 mt-4 md:mt-0">
           <a
-            href="#"
-            className="text-black px-2 py-2 rounded-md font-medium hover:bg-green-200 text-xl  w-[80px] "
+            href="/Login"
+            className="text-black px-2 py-3 rounded-md font-medium hover:bg-green-200 text-xl  w-[90px]"
           >
             Sign In
           </a>
           <a
-            href="#"
+            href="/Signup"
             className="text-black px-2 py-3 rounded-md font-medium hover:bg-green-200 text-xl  w-[90px]"
           >
             Sign Up
@@ -71,8 +75,11 @@ const Navbar = () => {
         </div>
       </div>
 
-    
-      <div className={`md:hidden ${isOpen ? "flex" : "hidden"} flex-col space-y-3 mt-4`}>
+      <div
+        className={`md:hidden ${
+          isOpen ? "flex" : "hidden"
+        } flex-col space-y-3 mt-4`}
+      >
         <a
           href="#"
           className="text-black px-2 py-3 rounded-md font-medium hover:bg-green-200 text-xl "
