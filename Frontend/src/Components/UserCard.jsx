@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 // Ensure Tailwind CSS is imported here
 
 const data = [
   {
-    img: "/img/1000_F_631526147_uIiqKqWbZEgwLLd0vbLwcim1cKlQyokN 1.jpg",
-    instructorImg: "/img/images 1.png",
+    img: "/img/image1.jpg",
+    instructorImg: "/img/images1.jpg",
     instructor: "Jason Williams",
     sub: "Science",
     title: "Data Science And Machine Learning with Python-Hands On",
@@ -16,8 +17,8 @@ const data = [
     star: "/img/Star 4.png"
   },
   {
-    img: "/img/african-students-computer-29039508 1.jpg",
-    instructorImg: "/img/images (1) 1.png",
+    img: "/img/image2.webp",
+    instructorImg: "/img/image2.webp",
     instructor: "Jason Williams",
     sub: "Science",
     title: "Data Science And Machine Learning with Python-Hands On",
@@ -28,8 +29,8 @@ const data = [
     star: "/img/Star 4.png"
   },
   {
-    img: "/img/Brown-university-admission-jpg 1.jpg",
-    instructorImg: "/img/images (1) 1.png",
+    img: "/img/image3.webp",
+    instructorImg: "/img/image3.webp",
     instructor: "Rose Simmons",
     sub: "Science",
     title: "Culture and Leadership: Strategies for a successful business",
@@ -43,7 +44,7 @@ const data = [
 
 const Card = ({ data }) => {
   return (
-    <div className="mb-20 bg-white shadow-lg rounded-lg overflow-hidden border border-green-700 p-4 m-12 max-w-xs  transition-transform transform hover:scale-105 hover:shadow-xl hover:border-2 hover:border-green-600">
+    <div className="mb-20 bg-white shadow-lg rounded-lg overflow-hidden border border-green-700 p-2 m-8 max-w-xs  transition-transform transform hover:scale-105 hover:shadow-xl hover:border-2 hover:border-green-600">
       <img src={data.img} alt={data.title} className="w-full h-32 object-cover rounded-xl rounded-xl" />
       <div className="flex items-center mt-2">
         <img src={data.instructorImg} alt={data.instructor} className="w-10 h-10 rounded-full mr-2" />
@@ -73,7 +74,7 @@ const Card = ({ data }) => {
 
 const UserCard = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
+    <div className="min-h-[60vh] bg-gray-100 flex flex-col items-center justify-center">
       <div className="flex flex-wrap justify-center">
         {data.map((item, index) => (
           <Card key={index} data={item} />

@@ -2,7 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontWeight:{
+        extraheavy:500,
+      },
+      fontFamily:{
+        alexandria:['Alexandria', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 };
