@@ -36,7 +36,7 @@ function Banner() {
   
       <div>
       <img
-            className="mt-[40px] h-[500px] w-[1000px] mr-[600px]"
+            className="mt-[40px] h-[500px] w-[1000px] mr-[601px]"
             src={work}
             alt="Placeholder"
           />
