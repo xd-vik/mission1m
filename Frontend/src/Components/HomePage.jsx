@@ -11,7 +11,7 @@ function HomePage() {
   return (
     <>
     <div className='min-h-screen'>
-      <div className='bg-green-100 pt-10'>
+      <div className='bg-green-100 p-2'>
       <Navbar />
       <Banner/>
       </div>
