@@ -5,7 +5,7 @@ import work from '/work.png';
 function Banner() {
   return (
 
-    <div className="p-10 flex flex-col md:flex-row bg-green-100 ">
+    <div className="md:p-10 p-1 flex flex-col md:flex-row bg-green-100 ">
         <div>
       <h1 className="text-5xl font-bold text-green-500 mb-6">Mission One Million:</h1>
       <h2 className="text-5xl font-bold mb-6">Empowering Learning </h2>
@@ -36,7 +36,7 @@ function Banner() {
   
       <div>
       <img
-            className="mt-[40px] h-[500px] w-[1000px] mr-[600px]"
+            className="mt-[40px] h-[500px] w-[1000px] mr-[601px]"
             src={work}
             alt="Placeholder"
           />
