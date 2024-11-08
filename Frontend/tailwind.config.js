@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontWeight:{
-        extraheavy:500,
+        extraheavy:550,
       },
       fontFamily:{
         alexandria:['Alexandria', 'sans-serif'],
