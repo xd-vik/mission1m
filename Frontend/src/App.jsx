@@ -5,6 +5,7 @@ import About from "./Components/About";
 import ContactUs from "./Components/ContactUs";
 import Login from "./Components/Login";
 import SignUp from "./Components/SignUp";
+import Enable from "./Components/Enable";
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
         <Route path="/contactUs" element={<ContactUs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signUp" element={<SignUp />} />
+        <Route path="/Enable" element={<Enable />} />
       </Routes>
     </>
   );
