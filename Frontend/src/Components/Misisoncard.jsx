@@ -1,5 +1,6 @@
 // MissionCard.js
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const missionData = [
   {
@@ -16,10 +17,13 @@ export const missionData = [
     title: 'Empower',
     description: 'Work with industry professionals to gain confidence and describe the work',
     button: 'Know more',
+    route:'/empower',
   },
 ];
 
+
 const MissionCard = () => {
+  const navigate = useNavigate();
   return (
     <>
     <div className="flex flex-col md:flex-row items-center justify-center bg-gray-100 p-4">
@@ -31,7 +35,11 @@ const MissionCard = () => {
         <div className="relative border border-green-600 rounded-lg p-5 w-full max-w-[280px] h-[290px] text-center shadow-lg bg-[#5ca4754d]" key={index}>
           <h2 className="text-3xl md:text-4xl text-green-700 mb-2 font-semibold">{mission.title}</h2>
           <p className="mb-6 py-8 text-xl">{mission.description}</p>
-          <button className="absolute bottom-[2vw] left-[10vh] bg-[#369256] text-white rounded-full py-2 px-4 cursor-pointer hover:bg-[#2a683d]">
+         
+         
+         
+          <button className="absolute bottom-[2vw] left-[10vh] bg-[#369256] text-white rounded-full py-2 px-4 cursor-pointer hover:bg-[#2a683d]"
+          onClick={()=> navigate(mission.route)} >
             {mission.button}
           </button>
         </div>
