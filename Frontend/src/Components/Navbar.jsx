@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "/logo.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,18 +62,18 @@ const Navbar = () => {
 
         {/*  Sign In and Sign Up */}
         <div className="hidden md:flex space-x-7 mt-4 md:mt-0 ">
-          <a
-            href="#"
+          <Link 
+          to='/login'
             className="text-black px-2 py-3 rounded-md font-medium hover:bg-green-200 text-xl  w-[80px] "
           >
-            Sign In
-          </a>
-          <a
-            href="#"
+            Sign In </Link>
+          
+          <Link 
+            to='/signUp'
             className="text-black px-2 py-3 rounded-md font-medium hover:bg-green-200 text-xl  w-[90px]"
           >
             Sign Up
-          </a>
+          </Link>
         </div>
       </div>
 
