@@ -9,6 +9,10 @@ export default {
       fontFamily:{
         alexandria:['Alexandria', 'sans-serif'],
       },
+      screens: {
+        'sm': '300px',
+        
+      },
     },
   },
   plugins: [],

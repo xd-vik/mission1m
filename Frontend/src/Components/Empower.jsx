@@ -1,10 +1,27 @@
 import React from "react";
 
+export const data=[
+  {
+    title:"Professional Mentorship",
+    desc:" Work with experienced professionals who provide guidance,feedback, and real-world insights."
+  },
+ {
+  title:"    Confidence Building",
+  desc:" Develop the confidence to present and describe your work,preparing you for future professional environments."
+
+ },
+ {
+  title:" Career Preparation",
+    desc:" Gain practical skills and the ability to communicate your achievements, giving you a competitive edge in your career."
+
+ }
+]
+
 function Empower() {
   return (
     <>
       <div className="bg-gray-100">
-        <div className="mx-auto md:px-40 px-10 text-2xl ">
+        <div className="mx-auto md:px-40 px-10 md:text-2xl text-xl  ">
           <h1 className="text-6xl font-bold text-center text-green-700 mb-4 p-5">
             Empower
           </h1>
@@ -30,35 +47,18 @@ function Empower() {
         </div>
 
         <div className="flex flex-wrap items-center justify-center min-h-[40vh] pt-10 gap-10 md:gap-20 text-2xl">
-          <div className="relative border border-green-600 rounded-lg p-5 w-full max-w-[350px] h-[340px] text-center shadow-lg bg-[#5ca4754d]">
-            <h3 className="font-bold mb-2 text-3xl text-green-700">
-              Professional <br /> Mentorship
+            {data.map((vision,index)=>(
+             <div className="relative border border-green-600 rounded-lg p-3 w-full max-w-[280px] h-[290px] text-center shadow-lg bg-[#5ca4754d] text-xl" key={index}>
+            <h3 className="font-bold  text-3xl text-green-700">
+              {vision.title}
             </h3>
             <p className="p-6">
               Work with experienced professionals who provide guidance,
               feedback, and real-world insights.
             </p>
           </div>
-          <div className="relative border border-green-600 rounded-lg p-5 w-full max-w-[350px] h-[340px] text-center shadow-lg bg-[#5ca4754d] ">
-            <h3 className="font-bold mb-2 text-3xl text-green-700">
-              Confidence <br />
-              Building
-            </h3>
-            <p className="p-6">
-              {" "}
-              Develop the confidence to present and describe your work,
-              preparing you for future professional environments.
-            </p>
-          </div>
-          <div className="relative border border-green-600 rounded-lg p-5 w-full max-w-[350px] h-[340px] text-center shadow-lg bg-[#5ca4754d]">
-            <h3 className="font-bold mb-2 text-3xl text-green-700">
-              Career <br /> Preparation
-            </h3>
-            <p className="p-6">
-              Gain practical skills and the ability to communicate your
-              achievements, giving you a competitive edge in your career.
-            </p>
-          </div>
+        ))}
+         
         </div>
 
         <section className="mx-auto md:px-40 px-10 text-2xl mt-10">
@@ -72,7 +72,7 @@ function Empower() {
             Let's empower your future together.
           </p>
           <section className="text-center">
-            <button className="bg-green-700 text-white py-4 px-6 rounded-full text-2xl mb-20">
+            <button className="bg-green-700 text-white md:py-4 py-1   md:px-6 px-2 rounded-full md:text-2xl text-[15px] mb-20">
               Start Building Your Confidence
             </button>
           </section>
