@@ -7,22 +7,27 @@ export const missionData = [
     title: 'Enable',
     description: 'Provide the students with the right mindset',
     button: 'Know more',
+    route:'/enable',
+    isButtonElement: true,
   },
   {
     title: 'Engage',
     description: 'Get to work on live projects',
     button: 'Know more',
+    route:'/engage',
+    isButtonElement: true,
   },
   {
     title: 'Empower',
     description: 'Work with industry professionals to gain confidence and describe the work',
     button: 'Know more',
     route:'/empower',
+    isButtonElement: true,
   },
 ];
 
 
-const MissionCard = () => {
+const MissionCard = ({missionData}) => {
   const navigate = useNavigate();
   return (
     <>
@@ -35,13 +40,9 @@ const MissionCard = () => {
         <div className="relative border border-green-600 rounded-lg p-5 w-full max-w-[280px] h-[290px] text-center shadow-lg bg-[#5ca4754d]" key={index}>
           <h2 className="text-3xl md:text-4xl text-green-700 mb-2 font-semibold">{mission.title}</h2>
           <p className="mb-6 py-8 text-xl">{mission.description}</p>
-         
-         
-         
-          <button className="absolute bottom-[2vw] left-[10vh] bg-[#369256] text-white rounded-full py-2 px-4 cursor-pointer hover:bg-[#2a683d]"
-          onClick={()=> navigate(mission.route)} >
-            {mission.button}
-          </button>
+          {mission.isButtonElement && (
+          <button className="absolute bottom-[2vw] left-[10vh] bg-[#369256] text-white rounded-full py-2 px-4 cursor-pointer hover:bg-[#2a683d]" onClick={() => navigate(mission.route)}>{mission.button}</button>
+          )}
         </div>
       ))}
     </div>
