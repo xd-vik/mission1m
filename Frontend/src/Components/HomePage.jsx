@@ -1,11 +1,11 @@
 
 import React from 'react';
-
+import { missionData } from './MissionCard';
 import Carousel from './Carousel';
 import UserCard from './UserCard';
 import Navbar from "./Navbar";
 import Banner from './Banner';
-import Missioncard from './Misisoncard';
+import MissionCard from './MissionCard';
 
 function HomePage() {
   return (
@@ -15,7 +15,7 @@ function HomePage() {
         <Navbar />
         <Banner/>
       </div>
-      <Missioncard/>
+      <MissionCard missionData={missionData}/>
       <Carousel/>
       <UserCard/>
     </div>
