@@ -3,7 +3,7 @@ import logo from "/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row  items-center ">
         {/* Left Section: Logo */}
         <div className="  flex  justify-start ml-[-90%] mb-[60px]  md:ml-20 md:mb-0">
-          <div className="ml-0 md:ml-[-250px]">
+          <div className="ml-0 md:ml-[-150px]">
             <img src={logo} alt="Logo" className="md:ml-[100%]" />
           </div>
         </div>
