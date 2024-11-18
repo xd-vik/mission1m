@@ -6,23 +6,26 @@ export const missionData = [
   {
     title: 'Enable',
     description: 'Provide the students with the right mindset',
+    isButtonElement:true,
     button: 'Know more',
   },
   {
     title: 'Engage',
     description: 'Get to work on live projects',
     button: 'Know more',
+    isButtonElement:true,
   },
   {
     title: 'Empower',
     description: 'Work with industry professionals to gain confidence and describe the work',
     button: 'Know more',
     route:'/empower',
+    isButtonElement:true,
   },
 ];
 
 
-const MissionCard = () => {
+const MissionCard = ({missionData}) => {
   const navigate = useNavigate();
   return (
     <>
@@ -37,11 +40,12 @@ const MissionCard = () => {
           <p className="mb-6 py-8 text-xl">{mission.description}</p>
          
          
-         
+         {mission.isButtonElement && (
           <button className="absolute bottom-[2vw] left-[10vh] bg-[#369256] text-white rounded-full py-2 px-4 cursor-pointer hover:bg-[#2a683d]"
           onClick={()=> navigate(mission.route)} >
             {mission.button}
           </button>
+         )}
         </div>
       ))}
     </div>
