@@ -6,6 +6,7 @@ import UserCard from './UserCard';
 import Navbar from "./Navbar";
 import Banner from './Banner';
 import MissionCard from './MissionCard';
+import ContactUs from './ContactUs';
 
 function HomePage() {
   return (
@@ -15,9 +16,10 @@ function HomePage() {
         <Navbar />
         <Banner/>
       </div>
-      <MissionCard missionData={missionData}/>
+      <MissionCard/>
       <Carousel/>
       <UserCard/>
+      <ContactUs/>
     </div>
     </>
   
