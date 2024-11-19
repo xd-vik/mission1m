@@ -5,10 +5,8 @@ import About from "./Components/About";
 import ContactUs from "./Components/ContactUs";
 import Login from "./Components/Login";
 import SignUp from "./Components/SignUp";
-import Empower from "./Components/Empower";
 import Register from "./Components/Register";
-import Engage from "./Components/Engage";
-import Enable from "./Components/Enable";
+import CardPage from "./Components/CardPage";
 function App() {
   return (
     <>
@@ -18,10 +16,9 @@ function App() {
         <Route path="/contactUs" element={<ContactUs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signUp" element={<SignUp />} />
-        <Route path="/empower" element={<Empower />} />
+        <Route path="/card/:id" element={<CardPage />} />
+
         <Route path="/register" element={<Register />} />
-        <Route path="/Engage" element={<Engage />} />
-        <Route path="/Enable" element={<Enable />} />
       </Routes>
     </>
   );
