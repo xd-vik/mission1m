@@ -19,7 +19,6 @@ export const missionData = [
     description:
       "Work with industry professionals to gain confidence and describe the work",
     button: "Know more",
-    route:'/empower',
     isButtonElement: true,
   },
 ];

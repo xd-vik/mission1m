@@ -9,8 +9,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white text-xl  rounded-[20px] border-[3px] border-gray-300 md:mx-[2px] lg:mx-10 ">
-      <div className="flex justify-between  items-center  px-3">
+    <nav className="bg-white text-xl  rounded-[20px] border-[3px] border-gray-300 md:mx-[2px] lg:mx-10  ">
+      <div className="flex justify-between  items-center  px-3 py-2">
         <div className="flex items-center">
           <div className=" ">
             <img src={logo} alt="Logo" className="w-[50px] h-[50px] " />

@@ -12,7 +12,7 @@ import Footer from './Footer';
 function HomePage() {
   return (
     <>
-    <div className='min-h-screen'>
+    <div className='min-h-screen overflow-x-hidden'>
       <div className='bg-white p-2'>
         <Navbar />
         <Banner/>
