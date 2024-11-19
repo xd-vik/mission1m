@@ -1,5 +1,5 @@
 import React from 'react';
-import MissionCard from './Missioncard';
+import Misisoncard from './Misisoncard';
 
 const About = () => {
   return (
@@ -36,7 +36,7 @@ const About = () => {
 
       
       <div className="mb-8">
-        <MissionCard />
+        <Misisoncard />
       </div>
 
       
