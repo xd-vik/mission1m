@@ -1,7 +1,6 @@
 // MissionCard.js
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-
+import React, { useState } from 'react';
+import { Card } from './Card';
 export const missionData = [
   {
     title: 'Enable',
@@ -24,9 +23,9 @@ export const missionData = [
   },
 ];
 
-
-const MissionCard = ({missionData}) => {
-  const navigate = useNavigate();
+const MissionCard = () => {
+  const [data,setData]=useState(missionData);
+  console.log(data);
   return (
     <>
     <div className="flex flex-col md:flex-row items-center justify-center bg-gray-100 p-4">
@@ -34,19 +33,8 @@ const MissionCard = ({missionData}) => {
       <span className="font-semibold text-green-700 text-[30px] md:text-[40px]">Mission One Million</span>
     </div>
     <div className="flex flex-wrap items-center justify-center min-h-[40vh] pt-10 gap-10 md:gap-20 bg-[rgba(158,155,155,0.122)]">
-      {missionData.map((mission, index) => (
-        <div className="relative border border-green-600 rounded-lg p-5 w-full max-w-[280px] h-[290px] text-center shadow-lg bg-[#5ca4754d]" key={index}>
-          <h2 className="text-3xl md:text-4xl text-green-700 mb-2 font-semibold">{mission.title}</h2>
-          <p className="mb-6 py-8 text-xl">{mission.description}</p>
-         
-         
-         {mission.isButtonElement && (
-          <button className="absolute bottom-[2vw] left-[10vh] bg-[#369256] text-white rounded-full py-2 px-4 cursor-pointer hover:bg-[#2a683d]"
-          onClick={()=> navigate(mission.route)} >
-            {mission.button}
-          </button>
-         )}
-        </div>
+      {data.map((item, index) => (
+        <Card item={item} key={index} id={index}/>
       ))}
     </div>
     </>
