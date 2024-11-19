@@ -1,0 +1,15 @@
+.slick-prev,
+.slick-next {
+  background: #369256; /* Arrow background color */
+  color: white;        /* Arrow color */
+  border-radius: 50%;  /* Round shape */
+  padding: 10px;   
+  font-size: 50px; 
+  height: 8vh;
+  width: 8vh;   /* Padding around arrow */
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background: #2a683d; /* Hover effect */
+}
