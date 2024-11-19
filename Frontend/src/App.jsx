@@ -8,6 +8,7 @@ import SignUp from "./Components/SignUp";
 import Empower from "./Components/Empower";
 import Register from "./Components/Register";
 import Engage from "./Components/Engage";
+import Enable from "./Components/Enable";
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
         <Route path="/empower" element={<Empower />} />
         <Route path="/register" element={<Register />} />
         <Route path="/Engage" element={<Engage />} />
+        <Route path="/Enable" element={<Enable />} />
       </Routes>
     </>
   );
