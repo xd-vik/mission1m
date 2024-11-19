@@ -6,7 +6,7 @@ Here’s an example of a basic vercel.json file for a Node.js project:
   "version": 2,
   "builds": [
     {
-      "src": "*.js",
+      "src": "index.js",
       "use": "@vercel/node"
     }
   ],
