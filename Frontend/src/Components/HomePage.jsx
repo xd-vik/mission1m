@@ -7,6 +7,7 @@ import Navbar from "./Navbar";
 import Banner from './Banner';
 import MissionCard from './MissionCard';
 import ContactUs from './ContactUs';
+import Footer from './Footer';
 
 function HomePage() {
   return (
@@ -20,6 +21,7 @@ function HomePage() {
       <Carousel/>
       <UserCard/>
       <ContactUs/>
+      <Footer/>
     </div>
     </>
   
