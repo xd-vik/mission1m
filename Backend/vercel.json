@@ -1,0 +1,19 @@
+
+To deploy a Node.js project on Vercel, you need to create a vercel.json configuration file. This file helps define the settings and deployment behavior for your application.
+
+Here’s an example of a basic vercel.json file for a Node.js project:
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ]
+}
