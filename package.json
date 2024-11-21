@@ -1,0 +1,16 @@
+{
+  "name": "mission1m",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
+    "start-backend": "cd Backend && npm start",
+    "start-frontend": "cd Frontend && npm run dev",
+    "update": "concurrently \"npm run update-backend\" \"npm run update-frontend\" \"npm run root-dev\"",
+    "update-backend": "cd Backend && npm install",
+    "update-frontend": "cd Frontend && npm install",
+    "root-dev": "npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.1"
+  }
+}
