@@ -4,57 +4,56 @@ import { handleError, handleSuccess } from "../utils.jsx";
 import { ToastContainer } from "react-toastify";
 
 const Login = () => {
-  
   const navigate = useNavigate();
 
   // Corrected the variable name to loginInfo
   const [loginInfo, setLoginInfo] = useState({
-      email: '',
-      password: ''
+    email: "",
+    password: "",
   });
 
   const handleChange = (e) => {
-      const { name, value } = e.target;
-      setLoginInfo((prev) => ({
-          ...prev,
-          [name]: value
-      }));
+    const { name, value } = e.target;
+    setLoginInfo((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   const handleLogin = async (e) => {
-      e.preventDefault();
-      const { email, password } = loginInfo; // Corrected here to use loginInfo
+    e.preventDefault();
+    const { email, password } = loginInfo; // Corrected here to use loginInfo
 
-      if (!email || !password) {
-          return handleError('All fields are required');
+    if (!email || !password) {
+      return handleError("All fields are required");
+    }
+
+    try {
+      const url = "https://mission1m-backend.vercel.app/auth/login";
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(loginInfo), // Corrected here to use loginInfo
+      });
+
+      const result = await response.json();
+      const { success, message, jwtToken, name } = result;
+
+      if (success) {
+        handleSuccess(message);
+        localStorage.setItem("token", jwtToken);
+        localStorage.setItem("loggedInUser", name);
+        setTimeout(() => {
+          navigate("/");
+        }, 1000);
+      } else {
+        handleError(message || "Login failed");
       }
-
-      try {
-          const url = "http://localhost:8080/auth/login";
-          const response = await fetch(url, {
-              method: "POST",
-              headers: {
-                  'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(loginInfo) // Corrected here to use loginInfo
-          });
-
-          const result = await response.json();
-          const { success, message, jwtToken, name } = result;
-          
-          if (success) {
-              handleSuccess(message);
-              localStorage.setItem('token', jwtToken);
-              localStorage.setItem('loggedInUser', name);
-              setTimeout(() => {
-                  navigate('/');
-              }, 1000);
-          } else {
-              handleError(message || 'Login failed');
-          }
-      } catch (err) {
-          handleError('An error occurred. Please try again.');
-      }
+    } catch (err) {
+      handleError("An error occurred. Please try again.");
+    }
   };
 
   return (
@@ -65,7 +64,10 @@ const Login = () => {
         </h2>
         <form onSubmit={handleLogin} className="space-y-4">
           <div>
-            <label className="block mb-2 text-sm text-green-700" htmlFor="email">
+            <label
+              className="block mb-2 text-sm text-green-700"
+              htmlFor="email"
+            >
               Email Address
             </label>
             <input
@@ -81,7 +83,10 @@ const Login = () => {
           </div>
 
           <div>
-            <label className="block mb-2 text-sm text-green-700" htmlFor="password">
+            <label
+              className="block mb-2 text-sm text-green-700"
+              htmlFor="password"
+            >
               Password
             </label>
             <input
@@ -113,7 +118,7 @@ const Login = () => {
           </Link>
         </p>
       </div>
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 };
