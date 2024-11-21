@@ -126,14 +126,6 @@ git push
 
 8. Open a pull request. - go to your repo - click on contribute - send merge req. - Done ThankYou :)
 
-## Whenever You Start Your Work Please be in SYNC with this repo
-
-- Go to your Github forked Repo SYNC with this repo
-
--> in your local machine - git pull
-
-and after that start writing code and commit-push-openPR
-
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/xd-vik/mission1m.svg?style=for-the-badge
