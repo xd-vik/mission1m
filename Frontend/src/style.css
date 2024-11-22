@@ -1,15 +1,52 @@
-.slick-prev,
+/* .slick-prev,
 .slick-next {
-  background: #369256; /* Arrow background color */
-  color: white;        /* Arrow color */
-  border-radius: 50%;  /* Round shape */
+  background: #369256; 
+  color: white;        
+  border-radius: 50%;  
   padding: 10px;   
   font-size: 50px; 
   height: 8vh;
-  width: 8vh;   /* Padding around arrow */
+  width: 8vh;
 }
 
 .slick-prev:hover,
 .slick-next:hover {
-  background: #2a683d; /* Hover effect */
+  background: #2a683d; 
+}  */
+
+.slick-prev, .slick-next {
+  border: 1px solid #544f4fd4;
+  background-color: #0b680b; /* Arrow background color */
+  color: #0b680b;         /* Arrow color */
+  border-radius: 50%;   /* Rounded shape */
+  padding: 12px;        /* Arrow size */
+  font-size: 5vh;      /* Adjust font size */
+  height: 6vh;
+  width: 6vh;           /* Height and width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 55%;
+  z-index: 1;  /* Ensure the arrows are above carousel items */
+  cursor: pointer;
+  transition: background-color 0.3s ease;  /* Smooth transition on hover */
+}
+
+.slick-prev {
+  left: 15px;  /* Adjust left positioning */
+}
+
+.slick-next {
+  right: 15px;  /* Adjust right positioning */
+}
+.slick-prev:hover, .slick-next:hover {
+  background: #2a683d;  /* Darker background on hover */
+}
+
+@media (max-width: 768px) {
+  .slick-prev, .slick-next {
+    font-size: 24px;  /* Adjust font size for smaller screens */
+    padding: 8px;     /* Adjust padding */
+  }
 }
